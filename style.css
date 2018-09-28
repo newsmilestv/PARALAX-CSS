@@ -1,0 +1,81 @@
+:root {
+  --body: #666;
+  --bgc: #f4f4f4;
+  --dark: #282e34;
+  --dd: #ddd;
+  --black: #000;
+  --one: #111;
+  --w: #fff;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font: 400 16px/1.8em 'Lato', sans-serif;
+  color: var(--body);
+}
+
+div.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+
+div.pimg1 {
+  background-image: url('img/image1.jpg');
+  min-height: 100%;
+}
+div.pimg2 {
+  background-image: url('img/image2.jpg');
+  min-height: 400px;
+}
+div.pimg3 {
+  background-image: url('img/image3.jpg');
+  min-height: 400px;
+}
+
+section.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light {
+  background-color: var(--bgc);
+  color: var(--body);
+}
+
+.section-dark {
+  background-color: var(--dark);
+  color: var(--dd);
+}
+
+div.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 27px;
+  letter-spacing: 8px;
+  color: var(--black);
+}
+
+div.ptext span.border {
+ padding: 20px;
+ background-color: var(--one);
+ color: var(--w);
+}
+
+div.ptext span.border.trans {
+  background-color: transparent;
+}
+
+@media screen and (max-width: 568px) {
+  div.pimg1, .pimg2, .pimg3 {
+    background-attachment: scroll;
+  }
+}
